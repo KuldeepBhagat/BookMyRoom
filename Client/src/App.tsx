@@ -6,7 +6,7 @@ import Navbar from "./components/utility/navbar"
 export default function App() {
   return (
     <div className="">
-      <header className="flex h-12 bg-white w-full shadow-lg px-80">
+      <header className="flex h-14 bg-white w-full shadow-lg justify-center">
         < Navbar/>
       </header>
 
