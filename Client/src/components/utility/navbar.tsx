@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom"
 import { MapIcon, UserIcon, SiteIcon, MenuIcon } from "../../assets/icons/index"
-// import MapLogo from "../../assets/icons/map.svg?react";
 
 export default function NavigationBar() {
   const naviagte = useNavigate()
