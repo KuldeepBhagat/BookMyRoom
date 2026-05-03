@@ -38,7 +38,7 @@ export default function SearchBar() {
                       border-l h-full p-2
                         rounded-r-xl
                         font-bold
-                       "><span className="transition-all hover:scale-110 hover:text-green-700 inline-block">Search</span></button>
+                       "><span className="transition-all hover:scale-105 hover:text-green-700 inline-block">Search</span></button>
     </form>
   );
 }

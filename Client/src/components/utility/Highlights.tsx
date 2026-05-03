@@ -1,5 +1,6 @@
 import AngleLeft from "../../assets/icons/AngleLeft.svg?react"
 import AngleRight from "../../assets/icons/AngleRight.svg?react"
+import Catelogue from "./catalogue"
 import { useRef, useState } from "react"
 
 export default function Highlights() {
@@ -10,7 +11,7 @@ export default function Highlights() {
 
     const scroll = (direction: "left" | "right") => {
         if (scrollRef.current) {
-            const scrollAmmount = 300;
+            const scrollAmmount = 500;
 
             scrollRef.current.scrollBy({
                 left: direction === "left" ? -scrollAmmount : scrollAmmount,
@@ -34,10 +35,12 @@ export default function Highlights() {
 
     const buttonAniation = `absolute w-11 h-11 flex 
                 items-center justify-center text-5xl
-                bg-white shadow-lg border-red-400 
+                bg-white shadow-lg
                 -translate-x-2 rounded-full
                 transition-all
                 duration-100 ease-in-out
+                border-black/10 border
+                cursor-pointer
 
                 overflow-hidden
                 active:scale-90
@@ -47,33 +50,25 @@ export default function Highlights() {
                 after:transition-all after:duration-200 after:ease-out `
     return (
         <div className="flex">
-                <div className={`flex items-center justify-start relative transition-all ease-in-out duration-500
+                <div className={`flex items-center justify-start relative transition-all ease-in-out duration-500 z-10
                     ${isAtStart ? "opacity-0 invisible -translate-x-4" 
                         : "opacity-100 visible translate-x-0"
                     }`}>
                 <button onClick={() => scroll("left")}
-                    className={buttonAniation}>
+                    className={`${buttonAniation}`}>
                     <AngleLeft />
                 </button>
             </div>
 
-            <div className="flex justify-start w-full overflow-auto no-scrollbar" ref={scrollRef} onScroll={handleScroll}>
-                <div className=" flex shrink-0 bg-green-500 w-70 h-80 m-1 rounded-xl">
-                </div>
-                <div className=" flex shrink-0 bg-green-500 w-70 h-80 m-1 rounded-xl">
-                </div>
-                <div className=" flex shrink-0 bg-green-500 w-70 h-80 m-1 rounded-xl">
-                </div>
-                <div className=" flex shrink-0 bg-green-500 w-70 h-80 m-1 rounded-xl">
-                </div>
-                <div className=" flex shrink-0 bg-green-500 w-70 h-80 m-1 rounded-xl">
-                </div>
-                <div className=" flex shrink-0 bg-green-500 w-70 h-80 m-1 rounded-xl">
-                </div>
-                <div className=" flex shrink-0 bg-green-500 w-70 h-80 m-1 rounded-xl">
-                </div>
-                <div className=" flex shrink-0 bg-green-500 w-70 h-80 m-1 rounded-xl">
-                </div>
+            <div className=" border-y py-5 flex justify-start w-full overflow-auto no-scrollbar" ref={scrollRef} onScroll={handleScroll}>
+                <Catelogue Type="Highlight" />
+                <Catelogue Type="Highlight" />
+                <Catelogue Type="Highlight" />
+                <Catelogue Type="Highlight" />
+                <Catelogue Type="Highlight" />
+                <Catelogue Type="Highlight" />
+                <Catelogue Type="Highlight" />
+                <Catelogue Type="Highlight" />
             </div>
             <div className={`flex items-center justify-start relative transition-all ease-in-out duration-500
                             ${isAtEnd ? "opacity-0 invisible translate-x-5" 
