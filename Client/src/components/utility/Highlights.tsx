@@ -22,8 +22,8 @@ export default function Highlights() {
     }
 
     const handleScroll = () => {
-        if(scrollRef.current) {
-            const {scrollLeft, clientWidth, scrollWidth} = scrollRef.current
+        if (scrollRef.current) {
+            const { scrollLeft, clientWidth, scrollWidth } = scrollRef.current
             setIsAtStart(scrollLeft <= 5);
 
             // Total Content Width - Visible Window Width = Maximum possible scroll
@@ -31,6 +31,8 @@ export default function Highlights() {
             setIsAtEnd(CheckisAtEnd)
         }
     }
+
+    const  desktopOverride = "sm:flex sm:visible"
 
 
     const buttonAniation = `absolute w-11 h-11 flex 
@@ -50,10 +52,10 @@ export default function Highlights() {
                 after:transition-all after:duration-200 after:ease-out `
     return (
         <div className="flex">
-                <div className={`flex items-center justify-start relative transition-all ease-in-out duration-500 z-10
-                    ${isAtStart ? "opacity-0 invisible -translate-x-4" 
-                        : "opacity-100 visible translate-x-0"
-                    }`}>
+            <div className={`hidden ${desktopOverride} items-center justify-start relative transition-all ease-in-out duration-500 z-10 md:
+                    ${isAtStart ? "opacity-0 invisible -translate-x-4"
+                    : "opacity-100 visible translate-x-0"
+                }`}>
                 <button onClick={() => scroll("left")}
                     className={`${buttonAniation}`}>
                     <AngleLeft />
@@ -70,10 +72,10 @@ export default function Highlights() {
                 <Catelogue Type="Highlight" />
                 <Catelogue Type="Highlight" />
             </div>
-            <div className={`flex items-center justify-start relative transition-all ease-in-out duration-500
+            <div className={`hidden items-center justify-start relative transition-all ease-in-out duration-500 ${desktopOverride}
                             ${isAtEnd ? "opacity-0 invisible translate-x-5" 
-                                : "opacity-100 visible translate-x-0"
-                            }
+                    : "opacity-100 visible translate-x-0"
+                }
             `}>
                 <button onClick={() => scroll("right")}
                     className={`${buttonAniation} -translate-x-9`}>

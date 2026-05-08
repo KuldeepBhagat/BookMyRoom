@@ -5,12 +5,12 @@ import Navbar from "./components/utility/navbar"
 
 export default function App() {
   return (
-    <div className="">
+    <div className="flex flex-col min-h-screen">
       <header className="flex h-14 bg-white w-full shadow-lg justify-center">
         < Navbar />
       </header>
 
-      <div className="flex justify-center">
+      <div className="flex flex-1 justify-center">
         <main className=" flex w-full max-w-245">
           <Routes>
             <Route path="/" element={<Home />}></Route>
@@ -18,8 +18,9 @@ export default function App() {
           </Routes>
         </main>
       </div>
-      <div>
+      <div className="bg-red-500 shrink-0">
         Footer
+
       </div>
     </div>
   )

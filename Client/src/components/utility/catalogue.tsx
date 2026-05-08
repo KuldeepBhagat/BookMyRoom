@@ -1,12 +1,13 @@
 import RoomImage from "../../assets/Others/RoomImage.jpg"
+import Location from "../../assets/icons/Location.svg?react"
 
 export default function Catelogue({ Type }: { Type: "Highlight" | "general" }) {
     if (Type === "Highlight") {
         return (
-            <div className="flex ">
+            <div className="flex cursor-pointer ">
                 <div className=" shadow-xl gap-1 flex shrink-0 w-70 h-80 m-1 rounded-xl flex-col text-sm">
                     <div className=" center bg-amber-500 rounded-xl overflow-hidden ">
-                        <img className="rounded-t-xl w-70 h-39.5 hover:scale-110 transition-all ease-in-out duration-300 cursor-pointer" src={RoomImage} alt="Image" />
+                        <img className="rounded-t-xl w-70 h-39.5 hover:scale-110 transition-all ease-in-out duration-300" src={RoomImage} alt="Image" />
                     </div>
                     <div className="flex flex-col gap-1 px-1.5">
                         <div className="font-bold text-lg">
@@ -14,8 +15,9 @@ export default function Catelogue({ Type }: { Type: "Highlight" | "general" }) {
                                 Room for sale
                             </h1>
                         </div>
-                        <div className="text-xs">
-                            rajivgandhi chowk, bilaspur
+                        <div className="text-xs flex items-center gap-2 ">
+                            <Location className="w-4 h-4" />
+                            <span className="font-mono">rajivgandhi chowk, bilaspur</span>
                         </div>
                         <div className="flex gap-2 font-bold items-center">
                             <div className="text-sm bg-green-500 max-w-fit px-2 center rounded-md">
