@@ -1,0 +1,19 @@
+<svg width="500" height="140" viewBox="0 0 500 140" xmlns="http://www.w3.org/2000/svg">
+  
+  <defs>
+    <linearGradient id="GradWarm" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+
+    <linearGradient id="GradCool" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+
+  <text x="20" y="95" font-size="80" font-family="Poppins, Arial, sans-serif" font-weight="800" letter-spacing="0">
+    <tspan fill="url(#GradWarm)">Rad</tspan><tspan dx="-2" fill="url(#GradCool)">ius</tspan>
+  </text>
+
+</svg>

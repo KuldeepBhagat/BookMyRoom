@@ -26,8 +26,8 @@ export default function Home() {
                     </div>
                     <Highlights />
                 </div>
-                <div className="my-5">
-                    more
+                <div className="my-5 bg-green-300 h-140">
+                    Map will be here
                 </div>
             </div>
         </div>
